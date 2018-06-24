@@ -1,15 +1,24 @@
-import React, { Component } from 'react';
-import Button from 'antd/lib/button'
+import React, { Component } from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { FormattedMessage } from 'react-intl'
+
+import {
+  Home
+} from 'screen/index'
+
 import './App.css'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <h1>
-          对，你没有看错，这就是你要的网站
-        </h1>
-      </div>
+      <BrowserRouter>
+        <div>
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route component={NotFound} />
+          </Switch>
+        </div>
+      </BrowserRouter>
     );
   }
 }
