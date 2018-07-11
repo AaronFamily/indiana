@@ -39,7 +39,9 @@ const myAxios = (options) => {
         data: {}
     }
 
-    const opt = Object.assign(defaultOpt, options)
+    const opt = Object.assign({}, defaultOpt, options)
+
+    // const opt2 = { ...defaultOpt, ...options }
 
     const fireDate = new Date()
 
@@ -62,3 +64,33 @@ const myAxios = (options) => {
 }
 
 export default myAxios
+
+
+// function a (b) {
+//     return new Promise(function(resolve, reject){
+//         setTimeout(function(){
+//             console.log(4)
+//             resolve()
+//         }, 4000)
+
+//         $.ajax({
+//             success: function (data) {
+//                 resolve(data)
+//             },
+//             error: function (err) {
+//                 reject(err)
+//             }
+//         })
+//     })
+// }
+
+// function b (){
+//   console.log(3)
+// }
+
+// a().then(function (data) {
+//     b(data)
+// })
+// .catch(function(err){
+
+// })

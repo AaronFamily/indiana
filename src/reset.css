@@ -138,6 +138,14 @@ html {
   overflow-y: scroll;
 }
 
+body {
+  background-color: #1c2b3e;
+  background-image: url(./static/bg.png);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 /* we use a lot of ULs that aren't bulleted.
 	you'll have to restore the bullets within content,
 	which is fine because they're probably customized anyway */
